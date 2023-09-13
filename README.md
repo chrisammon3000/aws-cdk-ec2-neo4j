@@ -1,5 +1,5 @@
 # aws-cdk-ec2-neo4j
-CDK application to deploy a Neo4j instance on an EC2 instance.
+CDK application to deploy a Neo4j instance on an Amazon EC2.
 
 ## Table of Contents
 - [aws-cdk-ec2-neo4j](#aws-cdk-ec2-neo4j)
