@@ -1,0 +1,15 @@
+{
+    "layers": {
+        "graph_database": {
+            "env": {
+                "ssh_cidr": "0.0.0.0/0",
+                "ssh_key_name": "aws-cdk-ec2-neo4j-key-pair",
+                "ebs_volume_size": 64
+            }
+        }
+    },
+    "tags": {
+        "org": "my-organization",
+        "app": "aws-cdk-ec2-neo4j"
+    }
+}

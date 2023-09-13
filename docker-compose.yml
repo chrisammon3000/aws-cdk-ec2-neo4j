@@ -1,0 +1,15 @@
+---
+version: '3.4'
+services:
+  neo4j:
+    image: neo4j:latest
+    restart: always
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+      - "7473:7473"
+    environment:
+      - NEO4J_AUTH=neo4j/dash13
+    volumes:
+    - /opt/data/neo4j_data:/data/
+...
