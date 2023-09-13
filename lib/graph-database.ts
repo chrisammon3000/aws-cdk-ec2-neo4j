@@ -84,21 +84,21 @@ export class Neo4j extends Construct {
             }]
         });
 
-        // // add the user data script
-        // const userData = new Asset(this, 'UserData', {
-        //     path: path.join(__dirname, '../src/config.sh')
-        // });
+        // add the user data script
+        const userData = new Asset(this, 'UserData', {
+            path: path.join(__dirname, '../src/config.sh')
+        });
 
-        // const localPath = instance.userData.addS3DownloadCommand({
-        //     bucket: userData.bucket,
-        //     bucketKey: userData.s3ObjectKey
-        // });
+        const localPath = instance.userData.addS3DownloadCommand({
+            bucket: userData.bucket,
+            bucketKey: userData.s3ObjectKey
+        });
 
-        // instance.userData.addExecuteFileCommand({
-        //     filePath: localPath,
-        //     arguments: '--verbose -y'
-        // });
-        // userData.grantRead(instance.role);
+        instance.userData.addExecuteFileCommand({
+            filePath: localPath,
+            arguments: '--verbose -y'
+        });
+        userData.grantRead(instance.role);
 
         // create an elastic IP and associate it with the instance
         const eip = new ec2.CfnEIP(this, 'EIP', {
