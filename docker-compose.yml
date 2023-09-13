@@ -9,7 +9,7 @@ services:
       - "7687:7687"
       - "7473:7473"
     environment:
-      - NEO4J_AUTH=neo4j/dash13
+      - NEO4J_AUTH=neo4j/dash132023
     volumes:
     - /opt/data/neo4j_data:/data/
 ...
